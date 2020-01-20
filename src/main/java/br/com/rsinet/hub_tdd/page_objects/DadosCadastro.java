@@ -5,15 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import br.com.rsinet.hub_tdd.teste.ExcelUtils;
+import br.com.rsinet.hub_tdd.utils.ExcelUtils;
 import net.bytebuddy.asm.Advice.Return;
 
-public class RegistorPage {
+public class DadosCadastro {
 
 		private WebDriver driver;
 		private static WebElement element = null;
 		
-		public void inf(WebDriver driver) {
+		public void elementosCadastro(WebDriver driver) {
 			this.driver = driver;
 		}
 		
@@ -81,6 +81,13 @@ public class RegistorPage {
 			element = driver.findElement(By.id("register_btnundefined"));
 			return element;
 		}
+		
+//		public static String newUser(WebDriver driver) {
+//			String createdUser = driver.findElement(By.xpath(xpathExpression)).getText();
+//			return createdUser;
+//		}
+		
+		
 		
 	}
 	

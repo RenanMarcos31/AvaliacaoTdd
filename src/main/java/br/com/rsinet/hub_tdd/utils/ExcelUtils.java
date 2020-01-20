@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_tdd.teste;
+package br.com.rsinet.hub_tdd.utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,7 +18,7 @@ public class ExcelUtils {
 
 	private static XSSFRow Row;
 
-	public static void setExcelFile(String Path, String Planilha1) throws Exception {
+	public static void setExcelFile(String Path, String Planilha) throws Exception {
 
 		try {
 
@@ -30,7 +30,7 @@ public class ExcelUtils {
 
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 
-			ExcelWSheet = ExcelWBook.getSheet(Planilha1);
+			ExcelWSheet = ExcelWBook.getSheet(Planilha);
 
 		} catch (Exception e) {
 
@@ -52,7 +52,7 @@ public class ExcelUtils {
 
 		} catch (Exception e) {
 
-			return "";
+			return "00000";
 
 		}
 
